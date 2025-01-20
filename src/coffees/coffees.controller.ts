@@ -27,16 +27,16 @@ export class CoffeesController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.coffeesService.findOne(+id);
+    return this.coffeesService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateCoffeeDto: UpdateCoffeeDto) {
-    return this.coffeesService.update(+id, updateCoffeeDto);
+    return this.coffeesService.update(id, updateCoffeeDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.coffeesService.remove(+id);
+    return this.coffeesService.remove(id);
   }
 }
